@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Online Resume</title>
     <style>
-      /* --- Global & Base Styles --- */
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           "Helvetica Neue", Arial, sans-serif;
@@ -25,8 +24,6 @@
         border-radius: 8px;
         overflow: hidden;
       }
-
-      /* --- Left Column --- */
       .left-column {
         background-color: #f2f2f2;
         width: 35%;
@@ -70,8 +67,6 @@
         margin-bottom: 8px;
         font-weight: bold;
       }
-
-      /* --- Right Column --- */
       .right-column {
         width: 65%;
         padding: 40px;
@@ -83,7 +78,7 @@
         content: "";
         position: absolute;
         left: 40px;
-        top: 150px; /* Adjust start position */
+        top: 150px;
         bottom: 40px;
         width: 2px;
         background-color: #e0e0e0;
@@ -108,15 +103,14 @@
 
       .section {
         margin-bottom: 30px;
-        padding-left: 40px; /* Space for timeline icons */
+        padding-left: 40px;
         position: relative;
       }
 
-      /* Timeline dots */
       .section::before {
         content: "";
         position: absolute;
-        left: -8px; /* Center it on the timeline */
+        left: -10px;
         top: 6px;
         width: 18px;
         height: 18px;
@@ -158,7 +152,42 @@
         margin-top: 5px;
       }
 
-      /* --- Responsive Design --- */
+      .project-image {
+        max-width: 100%;
+        height: auto;
+        max-height: 300px;
+        display: block;
+        margin-top: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .gallery-image {
+        flex: 1 1 100px;
+        max-width: 150px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* --- ADDED: Project Video Styles --- */
+      .project-video {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-top: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
       @media (max-width: 768px) {
         .resume-container {
           flex-direction: column;
@@ -180,7 +209,7 @@
           padding-left: 30px;
         }
         .section::before {
-          left: -8px;
+          left: 8px;
         }
       }
     </style>
@@ -188,11 +217,7 @@
   <body>
     <div class="resume-container">
       <aside class="left-column">
-        <img
-          src="https://drive.google.com/uc?export=view&id=1MD3gTpG3ko_fLfFPXbxlg5Stw_IFhlH0"
-          alt="Profile Picture"
-          class="profile-pic"
-        />
+        <img src="image.jpg" alt="Profile Picture" class="profile-pic" />
 
         <div class="contact-info">
           <p><strong>Location:</strong> Tokyo, Japan</p>
@@ -222,19 +247,22 @@
             <li>C++</li>
           </ul>
         </section>
-        <h2>I speak:</h2>
-        <ul class="skills-list">
-          <li>Mandarin(Native)</li>
-          <li>Cantonese(Native)</li>
-          <li>English</li>
-          <li>Beginner Japanese</li>
-        </ul>
+
+        <section>
+          <h2>I SPEAK</h2>
+          <ul class="skills-list">
+            <li>Mandarin (Native)</li>
+            <li>Cantonese (Native)</li>
+            <li>English</li>
+            <li>Beginner Japanese</li>
+          </ul>
+        </section>
       </aside>
 
       <main class="right-column">
         <header class="header">
           <h1>Junjie (Chris) Deng</h1>
-          <p>Front-end Web Developer</p>
+          <p>Front-end focused developer</p>
         </header>
 
         <section class="section">
@@ -247,64 +275,143 @@
         </section>
 
         <section class="section">
-          <h2>WORK EXPERIENCE</h2>
+          <h2>PROJECTS</h2>
+
           <div class="project">
-            <h3>Future Tech Inc. - Front-end Developer</h3>
-            <p class="project-meta">June 2020 - Present</p>
+            <h3>Html based, Web text adventure game</h3>
+            <p class="project-meta">Front-end Development</p>
+            <p>
+              <a
+                href="https://github.com/HKbroTher/WebAppProject"
+                class="project-link"
+                target="_blank"
+                >Click to go to Github</a
+              >
+            </p>
             <div class="project-desc">
-              Led the front-end development for Project Starlight, with key
-              responsibilities including component design, state management, and
-              team collaboration.
+              Interaction text adventure game including save and load function
+              and local sign in function. Collaborated with two other class
+              mates.<br />
+              <ul>
+                <li>UI, layout design</li>
+                <li>Jumping logic programming</li>
+                <li>Story design</li>
+              </ul>
+            </div>
+            <div class="project-gallery">
+              <img
+                src="web.png"
+                alt="Web Text Adventure Game Screenshot"
+                class="gallery-image"
+              />
+              <img
+                src="web2.png"
+                alt="Web Text Adventure Game Screenshot"
+                class="gallery-image"
+              />
+              <img
+                src="web3.png"
+                alt="Web Text Adventure Game Screenshot"
+                class="gallery-image"
+              />
+              <img
+                src="web4.png"
+                alt="Web Text Adventure Game Screenshot"
+                class="gallery-image"
+              />
+              <img
+                src="web5.png"
+                alt="Web Text Adventure Game Screenshot"
+                class="gallery-image"
+              />
+            </div>
+          </div>
+
+          <div class="project">
+            <h3>Android mobile app</h3>
+            <p class="project-meta">Front-end development</p>
+            <p>
+              <a
+                href="https://github.com/HKbroTher/MobileAppProject"
+                class="project-link"
+                target="_blank"
+                >Click to go to Github</a
+              >
+            </p>
+            <div class="project-desc">
+              Android Movies app <br />
+              Highly costumized opening pages<br />
+              Category page with different genre of movies<br />
+              Like function allowed user to save favorite movies to personal
+              page<br />
+              Netflix-style UI.<br />
+              Collaborated with two other class mates.<br />
+              <ul>
+                <li>UI, layout design</li>
+                <li>Like function programming</li>
+                <li>Clickable buttons and jumpling logic programming</li>
+              </ul>
+            </div>
+            <div class="project-gallery">
+              <img
+                src="mobile1.png"
+                alt="Android Mobile App Screenshot"
+                class="gallery-image"
+              />
+              <img
+                src="mobile2.png"
+                alt="Android Mobile App Screenshot"
+                class="gallery-image"
+              />
+              <img
+                src="mobile3.png"
+                alt="Android Mobile App Screenshot"
+                class="gallery-image"
+              />
+              <img
+                src="mobile4.png"
+                alt="Android Mobile App Screenshot"
+                class="gallery-image"
+              />
+              <img
+                src="mobile5.png"
+                alt="Android Mobile App Screenshot"
+                class="gallery-image"
+              />
             </div>
           </div>
         </section>
 
         <section class="section">
-          <h2>PROJECTS</h2>
+          <h2>WHAT I AM LEARNING</h2>
 
           <div class="project">
-            <h3>E-commerce Website</h3>
-            <p class="project-meta">2020 | Front-end Development</p>
-            <p><a href="#" class="project-link">live-demo-link.com</a></p>
+            <h3>Unity 2D Metroidvania game In progress...</h3>
+            <p class="project-meta">Individual Development</p>
             <div class="project-desc">
-              A comprehensive project simulating a modern e-commerce platform.
+              Using C# and unity hub
               <ul>
-                <li>Developed a responsive user interface with React.</li>
+                <li>Attack logic, enemy on-hit animation, player animation</li>
                 <li>
-                  Managed application state using Redux for the shopping cart.
+                  Component-Based Architecture, 2D Kinematic Movement<br />
+                  Collision/Hit Detection, State-Driven Animation Control<br />
+                  Dynamic Animation Blending
                 </li>
-                <li>Integrated with a REST API for product data.</li>
               </ul>
             </div>
-          </div>
-
-          <div class="project">
-            <h3>Personal Portfolio</h3>
-            <p class="project-meta">2019 | Web Design & Development</p>
-            <p><a href="#" class="project-link">github.com/your-repo</a></p>
-            <div class="project-desc">
-              Designed and built a personal portfolio to showcase skills and
-              projects.
-              <ul>
-                <li>Created with vanilla HTML, CSS, and JavaScript.</li>
-                <li>Implemented a dark mode toggle feature.</li>
-                <li>Optimized for fast load times and SEO best practices.</li>
-              </ul>
-            </div>
+            <video controls width="100%" class="project-video">
+              <source src="2dgame.mp4" type="video/mp4" />
+            </video>
           </div>
         </section>
       </main>
     </div>
 
     <script>
-      // --- JavaScript: Simple Email Obfuscation ---
-      // This helps prevent simple web scrapers from grabbing your email address.
       const emailUser = "cpdengjunjie";
       const emailDomain = "gmail.com";
       const emailElement = document.getElementById("email-placeholder");
-
       emailElement.textContent = emailUser + "@" + emailDomain;
-      // To make it a clickable mail link, uncomment the line below:
       emailElement.innerHTML = `<a href="mailto:${emailUser}@${emailDomain}">${emailUser}@${emailDomain}</a>`;
     </script>
   </body>
