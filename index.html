@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Junjie Deng · Résumé</title>
+  <meta name="description" content="Junjie Deng (邓浚杰): Computer Science graduate based in Tokyo, Japan.">
+  <meta name="theme-color" content="#10281b">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23f4ead5'/%3E%3Cpath d='M8 2 13 8 8 14 3 8Z' fill='%23a3202a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="booting">
+  <!-- Animated felt background + CRT overlay (purely decorative) -->
+  <div class="bg" aria-hidden="true"></div>
+  <div class="crt" aria-hidden="true">
+    <div class="crt-scan"></div>
+    <div class="crt-noise"></div>
+    <div class="crt-vignette"></div>
+  </div>
+
+  <a class="skip" href="#main" id="skipLink">Skip to content</a>
+
+  <div class="app" id="app">
+    <header class="topbar">
+      <a class="brand" href="#top"><span class="brand-chip" aria-hidden="true">♦</span><span id="brand">JUNJIE DENG</span></a>
+      <div class="controls">
+        <button class="pill crt-toggle" id="crtToggle" type="button" aria-pressed="true">CRT: ON</button>
+        <div class="lang" role="group" aria-label="Language / 语言">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="screen" tabindex="-1">
+      <noscript><p class="panel noscript">This site needs JavaScript to deal its cards. 本网站需要启用 JavaScript。</p></noscript>
+    </main>
+
+    <footer class="footer" id="footer"></footer>
+  </div>
+
+  <script src="js/content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
