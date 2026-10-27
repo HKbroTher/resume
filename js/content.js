@@ -1,7 +1,7 @@
 /* =====================================================================
    SITE CONTENT: edit this file to update the page.
-   `en` and `zh` share the same structure. When you add or remove an
-   item in one language, do the same in the other. Plain text only.
+   `en`, `zh` and `ja` share the same structure. When you add or remove
+   an item in one language, do the same in the others. Plain text only.
    ===================================================================== */
 window.SITE_CONTENT = {
   /* ---------- Language-independent settings ---------- */
@@ -189,6 +189,96 @@ window.SITE_CONTENT = {
       groups: [
         { label: "技术技能", items: ["Python（Pandas、NumPy、Scikit-learn）", "SQL", "Excel", "Git", "REST API", "Linux/Unix 命令行"] },
         { label: "通用能力", items: ["数据分析", "根因分析", "流程标准化", "跨部门沟通", "利益相关方协调"] }
+      ]
+    }
+  },
+
+  /* =============================== 日本語 =============================== */
+  ja: {
+    meta: {
+      htmlLang: "ja",
+      title: "鄧浚杰 · レジュメ",
+      description: "鄧浚杰（デン　ジュンジエ／Junjie Deng）：東京在住、コンピュータサイエンス専攻（2026年12月卒業見込み）。",
+      brand: "鄧浚杰"
+    },
+    ui: {
+      skip: "本文へスキップ",
+      crtOn: "CRT：オン",
+      crtOff: "CRT：オフ",
+      kicker: "★ プレイヤー 1 · ディール中",
+      emailMe: "メールで連絡",
+      downloadCv: "履歴書をダウンロード",
+      footer: "HTML・CSS・JavaScript のみで構築。"
+    },
+    profile: {
+      name: "鄧浚杰",
+      altName: "デン　ジュンジエ（Junjie Deng）",
+      role: "コンピュータサイエンス専攻",
+      location: "日本・東京"
+    },
+    headlines: [
+      "コンピュータサイエンス専攻、2026年12月卒業見込み。",
+      "中国・アメリカ・日本で学んできました。",
+      "東京在住。"
+    ],
+    about: {
+      title: "自己紹介",
+      text: "コンピュータサイエンス専攻で、2026年12月に卒業見込みです。中国、アメリカ、日本で学んだ経験から、新しい環境にすぐ適応でき、異なる文化的背景を持つ人とも円滑に協働できます。"
+    },
+    languages: {
+      title: "言語",
+      items: [
+        { name: "中国語", level: "ネイティブ" },
+        { name: "広東語", level: "ネイティブ" },
+        { name: "英語", level: "ビジネスレベル" },
+        { name: "日本語", level: "日常会話レベル" }
+      ]
+    },
+    education: {
+      title: "学歴",
+      items: [
+        {
+          when: "2026年12月 卒業見込み",
+          title: "コンピュータサイエンス学士",
+          place: "テンプル大学ジャパンキャンパス（Temple University, Japan Campus）· 東京",
+          bullets: [
+            "主な履修科目：オペレーションズ・リサーチ、データベース管理システム（SQL）、データ構造とアルゴリズム、システムアーキテクチャ、オペレーティングシステム",
+            "学部の最初の2年間は米国カリフォルニア州の De Anza College に在籍"
+          ]
+        }
+      ]
+    },
+    experience: {
+      title: "職務経歴",
+      items: [
+        {
+          when: "2026年1月 – 2026年6月",
+          title: "ソフトウェアエンジニア インターン",
+          place: "Japanime Co. Ltd · 東京",
+          bullets: [
+            "プロダクトマネージャー、開発者、QAテスターと連携し、要件の明確化、不具合の再現、修正内容の検証を担当。",
+            "検証チェックリストを作成してチームのワークフローを標準化し、リリースの品質を安定させた。",
+            "アプリケーションのパフォーマンスを分析し、根本原因分析の手法で問題を特定。",
+            "バックエンドサービスと連携した機能テストを行い、データの受け渡しとエラーハンドリングの信頼性を確保。"
+          ]
+        },
+        {
+          when: "2024年1月 – 2024年11月",
+          title: "フィールドオペレーション・ロジスティクス ボランティア",
+          place: "Tara Sreekrishnan カリフォルニア州議会議員選挙キャンペーン 2024",
+          bullets: [
+            "1,000人以上の住民や地元事業者と直接対話し、寄せられた意見をキャンペーン幹部向けの優先課題として整理。",
+            "厳しい締め切りの中、複数拠点でのイベント運営と資材配布を調整。",
+            "Excel でアウトリーチ指標を管理し、幹部へ毎週レポートを提出。"
+          ]
+        }
+      ]
+    },
+    skills: {
+      title: "スキル",
+      groups: [
+        { label: "テクニカルスキル", items: ["Python（Pandas、NumPy、Scikit-learn）", "SQL", "Excel", "Git", "REST API", "Linux/Unix コマンドライン"] },
+        { label: "ビジネススキル", items: ["データ分析", "根本原因分析", "業務プロセスの標準化", "部門横断的なコミュニケーション", "ステークホルダー調整"] }
       ]
     }
   }
