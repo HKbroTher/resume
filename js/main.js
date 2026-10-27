@@ -33,7 +33,10 @@
     if (fromUrl && C[fromUrl]) return fromUrl;
     const saved = store.get("lang");
     if (saved && C[saved]) return saved;
-    return (navigator.language || "").toLowerCase().startsWith("zh") ? "zh" : "en";
+    const nav = (navigator.language || "").toLowerCase();
+    if (nav.startsWith("zh")) return "zh";
+    if (nav.startsWith("ja")) return "ja";
+    return "en";
   }
   let lang = initialLang();
   let crtOn = store.get("crt") !== "off";
